@@ -1,0 +1,1 @@
+Template code python for project fastapi
