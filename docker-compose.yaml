@@ -1,6 +1,6 @@
 services:
   fastapt:
-    image: viendev9z/fastapi-templates # The image name and tag
+    image: ${IMAGE_TAG} # The image name and tag
     ports:
       - "5055:3000" # Map host port 8080 to container port 8080
     restart: unless-stopped
