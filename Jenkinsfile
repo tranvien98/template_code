@@ -32,8 +32,8 @@ pipeline {
                 script {
                     sh """
                     export IMAGE_TAG=${env.IMAGE_TAG}
-                    docker-compose -f docker-compose.yml down
-                    docker-compose -f docker-compose.yml up -d
+                    docker-compose -f docker-compose.yaml down
+                    docker-compose -f docker-compose.yaml up -d
                     """
                 }
             }
