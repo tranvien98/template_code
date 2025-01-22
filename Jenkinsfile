@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        DOCKERHUB_CREDENTIALS = credentials('dockerhub-credentials') // Replace with your Jenkins credentials ID for Docker Hub
+        DOCKERHUB_CREDENTIALS = 'dockerhub-credentials' // Replace with your Jenkins credentials ID for Docker Hub
         DOCKER_IMAGE = 'viendev9z/fastapi-templates'     // Replace with your Docker Hub repository
     }
 
