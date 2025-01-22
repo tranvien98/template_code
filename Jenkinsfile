@@ -3,14 +3,14 @@ pipeline {
 
     environment {
         DOCKERHUB_CREDENTIALS = credentials('dockerhub-credentials') // Replace with your Jenkins credentials ID for Docker Hub
-        DOCKER_IMAGE = 'your-dockerhub-username/your-image-name'     // Replace with your Docker Hub repository
+        DOCKER_IMAGE = 'viendev9z/fastapi-templates'     // Replace with your Docker Hub repository
     }
 
     stages {
         stage('Build Docker Image') {
             steps {
                 script {
-                    def buildTag = "${DOCKER_IMAGE}:${env.BUILD_NUMBER}"
+                    def buildTag = "${DOCKER_IMAGE}:0.${env.BUILD_NUMBER}"
                     sh "docker build -t ${buildTag} ."
                     env.IMAGE_TAG = buildTag // Pass the tag to subsequent stages
                 }
